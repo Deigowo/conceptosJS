@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> piedra, papel o tijera </title>
+        <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        :root {
+	    --White:  rgba(228, 238, 249, 0.938);
+	    --border-blur: solid 4pxrgba(255,255,255,.5);
+	    --box-shadow: 020px30px4pxrgba(0,0,0,.2);
+	    --text: #F1EDED;
+        }
+
+        body {
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(80,9,121,1) 24%, rgba(0,212,255,1) 100%);
+            font-family: 'Press Start 2P', cursive;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            width: 60%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .row { 
+            width: 100%; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .users {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .users div { 
+            width: 50%; 
+        }
+
+        .attack {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+            color: #03b2f7;
+            gap: 3rem;
+        }
+
+        button {
+            background-color: aquamarine;
+            backdrop-filter: blur(70px);
+            border: var(--border-blur);
+            box-shadow: var(--box-shadow);
+            border-radius: 10px;
+            padding: .6rem 2rem;
+            margin-top: 2rem;
+            color: #506378;
+            cursor: pointer;
+            font-size: 1.3rem;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #506378;
+            color: aliceblue;
+        }
+
+        #reload-button {
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            width: 100%; 
+            padding: 1rem;
+            margin: 0; 
+        }
+    </style>
+    </head>
+    <body>
+        <!-- Seleccionar jugada  -->
+        <div class="content">
+
+            <h1 class="titulo">Piedra, Papel o Tijera</h1>
+
+            <section id="start">
+            <div class="row"><button id="play-button">Jugar</button></div>
+            <div class="row users">
+            </section>
+                <section id="attack-selection">
+
+                    <div id="buttonContainer" class="attack-buttons">
+                        
+                    </div>
+
+                <div class="attack">
+                    <div class="player-attack">
+                        <p>Tú</p>
+                        <p id="player-lifes">3</p>
+                        <div id="players-attack"></div>
+                    </div>
+                    <div class="pc-attack">
+                        <p>PC</p>
+                        <p id="pc-lifes">3</p>
+                        <div id="pcs-attack"></div>
+                    </div>
+                </div>
+                </section>
+            </div>
+            <section id="Results">
+            <div class="messages">
+                <h1 id="Resultado">Resultado!</h1>
+            </div>
+            </section>
+            <section id="Reload">
+                <button id="reload-button">Reiniciar</button>
+            </section>
+        </div>
+    <script defer src="./PaperRockScissors.js"></script>
+</body>
+</html>
