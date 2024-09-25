@@ -61,3 +61,47 @@ function wrapping(gifts) {
 
 const carsEnvueltos = wrapping(cars)
 carsEnvueltos.forEach(car => console.log(car))
+
+// forEach, map, filter 
+// reduce
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const sumatoria = numbers.reduce((a,b) => a + b )
+console.log(numbers)
+console.log(sumatoria)
+const factorial = numbers.reduce((a, b) => a * b)
+console.log(factorial)
+
+// every regresa verdadero si todos cumplen
+
+const ages = [23, 14, 37, 19, 18, 22, 27]
+const elders = ages.every(age => age >= 18)
+const youngers = ages.every(age => age < 18)
+console.log(elders)
+console.log(youngers)
+
+// some regresa verdadero con uno que cumpla
+
+const elders2 = ages.some(age => age >= 18)
+const youngers2 = ages.some(age => age < 18)
+console.log(elders2)
+console.log(youngers2)
+
+//Ejercicios
+
+// Crear un array con elementos del 1 al 10
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const elements = array.map(element => element.toPrecision())
+const filtro = array.filter(element => element > 5)
+console.log(elements)
+console.log(filtro)
+// Crear uno nuevo con los cuadrados
+const cuadrados = array.map(element => element ** 2)
+// crear uno nuevo con las mitades
+const mitades = array.map(element => element / 2)
+// Crear uno nunvo con los pares
+const pares = array.filter(element => element % 2 === 0)
+// Crear uno nuevo con los impares
+const impares = array.filter(element => element % 2 !== 0)
+// Crear unon uevo con valores entre 3 y 8
+const entreTres = array.filter(element => element >= 3 && element <= 8)
