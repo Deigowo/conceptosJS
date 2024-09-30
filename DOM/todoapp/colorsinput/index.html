@@ -10,11 +10,17 @@
                 display: grid;
                 place-items: center;
             }
+            body div {
+                display: flex;
+                flex-direction: column;
+            }
         </style>
     </head>
     <body>
         <div>
-            <button id="btnchange"> Cambiar Color </button>
+            <input type="range" id="red" min="0" max="255"> Rojo </input>
+            <input type="range" id="green" min="0" max="255"> Green </input>
+            <input type="range" id="blue" min="0" max="255"> Blue </input>
             <h2>Color: <span id="color"></span></h2>
         </div>
         <script defer src='./app.js'></script>
