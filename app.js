@@ -1,2 +1,1 @@
-console.log("Hello")
-alert("Hello")
+const botonBolaMágica = document.getElementById('')
