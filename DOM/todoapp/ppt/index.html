@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+        <title>Piedra papel o tijeras</title>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                place-items: column;
+                background-color: #506378;
+            }
+            .images, .choices, .result {
+                width: 100%;
+                text-align: center;
+            }
+            picture img{
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class = 'images'>
+                <picture>
+                    <img src="./rock.png" alt="" data-id="rock">
+                </picture>
+                <picture>
+                    <img src="./paper.png" alt="" data-id="paper">
+                </picture>
+                <picture>
+                    <img src="./scissors.png" alt="" data-id="scissors">
+                </picture>
+            </div>
+            <div class="choices">
+                <picture>
+                    <img src="" alt="" id="choiceUser">
+                </picture>
+                <picture>
+                    <img src="" alt="" id="choicePC">
+                </picture>
+            </div>
+            <div class="result">
+                <h1>Ganador: <span></span></h1>
+            </div>
+        </div>
+        <script defer src='./app.js'></script>
+    </body>
+</html>
